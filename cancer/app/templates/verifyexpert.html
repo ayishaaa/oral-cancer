@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	{% load static %}
+<head>
+  <title>Verify Techie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'css/table.css' %}"/>
+</head>
+{% include "adminheader.html" %}
+   <table class="table">
+       <caption>Verify Expert</caption>
+     <thead>
+     	<tr>
+     
+			<th>Name</th>
+			<th>Email</th>
+			<th>Mobile</th>
+			<th>Designation</th>
+			<th>Address</th>
+			<th>Qualification</th>
+			<th>MCIDCIRegno</th>
+			<th>MoUsigned</th>
+			<th></th> 
+      
+        
+         <th></th>
+         <th></th>
+     	</tr>
+     </thead>
+     <tbody>
+		 {% for a in data %}
+     	  <tr>
+     	  	 
+			<td data-label="Name">{{a.Name}}</td>
+			<td data-label="Email">{{a.Email}}</td>
+			<td data-label="Mobile">{{a.Mobile}}</td>
+			<td data-label="Designation">{{a.Designation}}</td>
+			<td data-label="Address">{{a.Address}}</td>
+			<td data-label="Qualification">{{a.Qualification}}</td>
+			<td data-label="MCIDCIRegno">{{a.MCIDCIRegno}}</td>
+		    <td data-label="MoUsigned">{{a.MoUsigned}}</td>
+     	  
+			  <form method="post" action="/verifyexpert1/{{a.expert_id}}">
+				  {% csrf_token %}
+			  	<td><button type="submit" value="Verified" class="btn1">Accept</button></td>
+			  </form>
+			  <form method="post" action="/verifyexpert2/{{a.expert_id}}">
+                {% csrf_token %}
+                <td><button type="submit" value="Verified" class="btn1">Reject</button></td>
+            </form>
+     	  </tr>
+		   {% endfor %}
+     </tbody>
+   </table>
+
+</body>
+</html>

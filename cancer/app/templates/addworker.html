@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Health</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+      <!-- style css -->
+      <link rel="stylesheet" href="{% static 'css/st.css' %}">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+      <!-- fevicon -->
+      <link rel="icon" href="{% static 'images/fevicon.png' %}" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   {% load static %}
+{% include "adminheader.html" %}
+
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+    
+      <!-- end loader -->
+     
+      <section class="banner_main">
+         <div class="container">
+         <div class="row d_flex">
+            <div class="col-md-6">
+               <div class="text-bg">
+                  <h1>Oral health</h1>
+                  <p>“Cancer is a part of our life, but it's not our whole life. We're all in this together ” </p>
+                  
+               </div>
+            </div>
+            <div class="col-md-6">
+               <form id="request" class="main_form" action="/addworker1/" method="post">
+                   {% csrf_token %}
+                  <div class="row">
+                     <div class="col-md-12">
+                        <input class="contactus" placeholder="WORKER_ID" type="text" name="workerid"> 
+                     </div>
+                     <div class="col-md-12">
+                        <input class="contactus" placeholder="Name" type="text" name="name"> 
+                     </div>
+                     <div class="col-md-12">
+                        <input class="contactus" placeholder="Email" type="email" name="email"> 
+                     </div>
+                     <div class="col-md-12">
+                        <input class="contactus" placeholder="Mobile" type="number" name="mobile"> 
+                     </div>
+                     <div class="col-md-12">
+                        <input class="contactus" placeholder="Address" type="text" name="address"> 
+                     </div>
+                     <div class="col-md-12">
+                        <select name="dis" required class="contactus">
+                            <option value="District">District</option>
+                            <option value="Alappuzha">Alappuzha</option>
+                            <option value="Ernakulam">Ernakulam</option>
+                            <option value="Idukki">Idukki</option>
+                            <option value="Kannur">Kannur</option>
+                            <option value="Kasargod">Kasargod</option>
+                            <option value="Kollam">Kollam</option>
+                            <option value="Kottayam">Kottayam</option>
+                            <option value="Kozhikode">Kozhikode</option>
+                            <option value="Malappuram">Malappuram</option>
+                            <option value="Palakkad">Palakkad</option>
+                            <option value="Pathanamthitta">Pathanamthitta</option>
+                            <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                            <option value="Thrissur">Thrissur</option>
+                            <option value="Wayanad">Wayanad</option>
+                        </select>
+                     </div>
+                     <div class="col-md-12">
+                        <input class="contactus" placeholder="Pincode" type="number" name="pincode"> 
+                     </div>
+                     <div class="col-md-12"> 
+                        <select name="category" required class="contactus">
+                           <option value="Category">Category</option>
+                           <option value="Volunteer">Volunteer</option>
+                           <option value="Ashaworker">Asha Worker</option>
+                           <option value="Palliativenurse">Palliative Nurse</option>
+                           <option value="Healthnurse">Health Nurse</option>
+                           <option value="Healthinspector">Health Inspector</option>
+                           <option value="Staffnurse">Staff Nurse</option>
+                           <option value="Doctor">Doctor</option>
+                           <option value="Others">Others</option>
+                        </select>
+                     </div>
+                     <div class="col-md-12">
+                        <input class="contactus" placeholder="ID Card number" type="number" name="idcardnumber"> 
+                     </div>
+                     <div class="col-sm-12">
+                        
+                        <input type="submit" class="send_btn" value="register">
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </section>
+      <!-- end banner -->
+      <!-- cancer -->
+     
+      <script src="{% static 'js/jquery.min.js' %}"></script>
+      <script src="{% static 'js/popper.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+      <!-- sidebar -->
+      <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+      <script src="{% static 'js/custom.js' %}"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   </body>
+</html>
+

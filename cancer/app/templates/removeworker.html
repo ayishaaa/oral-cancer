@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	{% load static %}
+<head>
+  <title>Verify Techie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'css/table.css' %}"/>
+</head>
+{% include "adminheader.html" %}
+   <table class="table">
+       <caption>Remove worker</caption>
+     <thead>
+     	<tr>
+     
+     	 <th>Name</th>
+     	 <th>Address</th>
+		 <th>Mobile</th>
+		 <th>Email</th>
+		 <th>District</th>
+		 <th>Category</th>
+         <th>Pincode</th>
+         <th>Id card</th>
+        
+         <th></th>
+         <th></th>
+     	</tr>
+     </thead>
+     <tbody>
+		 {% for a in data %}
+     	  <tr>
+     	  	 
+     	  	  <td data-label="Name">{{a.Name}}</td>
+     	  	  <td data-label="Address">{{a.Address}}</td>
+     	  	  <td data-label="Mobile">{{a.Mobile}}</td>
+     	  	  <td data-label="Email">{{a.Email}}</td>
+     	  	  <td data-label="District">{{a.District}}</td>
+     	  	  <td data-label="Category">{{a.Category}}</td>
+     	  	  <td data-label="Pincode">{{a.Pincode}}</td>
+     	  	  <td data-label="IDcardno">{{a.IDcardno}}</td>
+     	  	 
+			  <form method="post" action="/removeworker1/{{a.worker_id}}">
+				  {% csrf_token %}
+			  	<td><button type="submit" value="Verified" class="btn1">Remove</button></td>
+			  </form>
+			 
+     	  </tr>
+		   {% endfor %}
+     </tbody>
+   </table>
+
+</body>
+</html>

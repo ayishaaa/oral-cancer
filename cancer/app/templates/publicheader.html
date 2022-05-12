@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar1 {
+  overflow: hidden;
+  background-color: #000;
+}
+
+.navbar1 a {
+  float: right;
+  font-size: 16px;
+  color: rgb(24, 23, 23);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown1 {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown1 .dropbtn1 {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: rgb(8, 8, 8);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar1 a:hover, .dropdown1:hover .dropbtn1 {
+  background-color: red;
+}
+
+.dropdown1-content {
+  display: none;
+  position: absolute;
+  background-color: #131212;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown1-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown1-content a:hover {
+  background-color: rgb(5, 4, 4);
+}
+
+.dropdown1:hover .dropdown1-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar1">
+
+  <a href="/login">Login </a>
+  <a href="/managehealthworker">Health worker registration </a>                   
+  <a href="/manageexpert">Expert Registration</a>
+  <a href="/index">Home</a>
+ 
+</div>
+
+
+
+</body>
+</html>
